@@ -18,6 +18,8 @@ const handleAppStart = () => {
     console.log(`Listening on port ${PORT}`);
 };
 
+// DB를 먼저 세팅해주고 서버를 실행함.
+// ex)Entity를 생성해준다던지 하는 작업들.
 createConnection(connectionOptions)
     .then(() => {
         app.start(appOptions, handleAppStart);
