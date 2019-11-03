@@ -9,7 +9,7 @@ import {
     Entity,
     PrimaryGeneratedColumn,
     UpdateDateColumn
-} from "typeorm";
+    } from "typeorm";
 
 const BCRYPT_ROUNDS = 10;
 
