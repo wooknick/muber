@@ -79,12 +79,12 @@ class User extends BaseEntity {
     @OneToMany(type => Verification, verification => verification.user)
     verifications: Verification[];
 
-    @OneToMany(type => Ride, ride => ride.passenger);
+    @OneToMany(type => Ride, ride => ride.passenger)
     ridesAsPassenger: Ride[];
 
-    @OneToMany(type => Ride, ride => ride.driver);
+    @OneToMany(type => Ride, ride => ride.driver)
     ridesAsDriver: Ride[];
-    
+
     @CreateDateColumn()
     createdAt: string;
 
