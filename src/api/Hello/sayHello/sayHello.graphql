@@ -1,8 +1,0 @@
-type Greeting {
-    error: Boolean!
-    text: String!
-}
-
-type Query {
-    sayHello: Greeting!
-}
