@@ -1,10 +1,14 @@
 import User from "../../../entities/User";
 import { EmailSignInMutationArgs, EmailSignInResponse } from "../../../types/graph.d";
 import { Resolvers } from "../../../types/resolvers";
+import createJWT from "../../../utils/createJWT";
 
 const resolvers: Resolvers = {
     Mutation: {
-        EmailSignIn: async (_, args: EmailSignInMutationArgs): Promise<EmailSignInResponse> => {
+        EmailSignIn: async (
+            _,
+            args: EmailSignInMutationArgs
+        ): Promise<EmailSignInResponse> => {
             const { email, password } = args;
             try {
                 const user = await User.findOne({ email });
@@ -17,10 +21,11 @@ const resolvers: Resolvers = {
                 }
                 const checkPassword = await user.comparePassword(password);
                 if (checkPassword) {
+                    const token = createJWT(user.id);
                     return {
                         ok: true,
                         error: null,
-                        token: "Coming soon"
+                        token
                     };
                 } else {
                     return {
