@@ -16,7 +16,7 @@ Clone Uber with React + GraphQL
 
 ### Authenticatoin:
 
--   [ ] Generate JWT
+-   [x] Generate JWT
 -   [ ] Verify JWT
 
 ---
