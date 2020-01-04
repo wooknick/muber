@@ -101,7 +101,7 @@ class User extends BaseEntity {
         type => Place,
         place => place.user
     )
-    places: Place[] | any;
+    places: Place[];
 
     @CreateDateColumn()
     createdAt: string;
