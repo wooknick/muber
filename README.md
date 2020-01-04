@@ -17,20 +17,20 @@ Clone Uber with React + GraphQL
 ### Authenticatoin:
 
 -   [x] Generate JWT
--   [ ] Verify JWT
+-   [x] Verify JWT
 
 ---
 
 ### Private Reslovers:
 
--   [ ] Verify email
--   [ ] Get my Profile
--   [ ] Update my Profile
--   [ ] Toggle Driving Mode
--   [ ] Report Location / Orientation
--   [ ] Add Place
--   [ ] Edit Place
--   [ ] Delete Place
+-   [x] Verify email
+-   [x] Get my Profile
+-   [x] Update my Profile
+-   [x] Toggle Driving Mode
+-   [x] Report Location / Orientation
+-   [x] Add Place
+-   [x] Edit Place
+-   [x] Delete Place
 -   [ ] See Nearby Drivers
 -   [ ] Subscribe to Nearby Drivers
 -   [ ] Request a Ride
