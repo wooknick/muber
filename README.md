@@ -1,4 +1,4 @@
-# Muber
+# Muber [![Build Status](https://travis-ci.com/wooknick/muber.svg?branch=master)](https://travis-ci.com/wooknick/muber)
 
 Clone Uber with React + GraphQL
 
