@@ -4,7 +4,7 @@ import { CompleteEmailVerificationMutationArgs, CompleteEmailVerificationRespons
 import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
 
-const resovlers: Resolvers = {
+const resolvers: Resolvers = {
     Mutation: {
         CompleteEmailVerification: privateResolver(
             async (
@@ -50,4 +50,4 @@ const resovlers: Resolvers = {
     }
 };
 
-export default resovlers;
+export default resolvers;
