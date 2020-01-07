@@ -23,7 +23,6 @@ const resolvers = {
                         lastLat: userLastLat,
                         lastLng: userLastLng
                     } = user;
-                    console.log(driverId, userId, isDriving);
                     return (
                         driverId !== userId &&
                         isDriving &&
