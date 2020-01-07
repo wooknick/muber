@@ -12,12 +12,21 @@ const resolvers = {
                     const user: User = context.currentUser;
                     const {
                         DriversSubscription: {
+                            id: driverId,
                             lastLat: driverLastLat,
-                            lastLng: driverLastLng
+                            lastLng: driverLastLng,
+                            isDriving
                         }
                     } = payload;
-                    const { lastLat: userLastLat, lastLng: userLastLng } = user;
+                    const {
+                        id: userId,
+                        lastLat: userLastLat,
+                        lastLng: userLastLng
+                    } = user;
+                    console.log(driverId, userId, isDriving);
                     return (
+                        driverId !== userId &&
+                        isDriving &&
                         driverLastLat >= userLastLat - 0.05 &&
                         driverLastLat <= userLastLat + 0.05 &&
                         driverLastLng >= userLastLng - 0.05 &&
