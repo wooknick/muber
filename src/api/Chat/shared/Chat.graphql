@@ -1,6 +1,8 @@
 type Chat {
     id: Int!
     messages: [Message]!
+    rideId: Int!
+    ride: Ride!
     passengerId: Int!
     passenger: User!
     driverId: Int!
