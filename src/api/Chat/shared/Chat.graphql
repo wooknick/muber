@@ -1,7 +1,10 @@
 type Chat {
     id: Int!
     messages: [Message]!
-    participants: [User]
+    passengerId: Int!
+    passenger: User!
+    driverId: Int!
+    driver: User!
     createdAt: String!
     updatedAt: String
 }
