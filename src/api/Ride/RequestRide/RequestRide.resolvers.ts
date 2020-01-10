@@ -15,7 +15,7 @@ const resolvers: Resolvers = {
             ): Promise<RequestRideResponse> => {
                 const user: User = req.user;
                 const notNull = cleanNullArgs(args);
-                if (!user.isRiding) {
+                if (!user.isRiding && !user.isDriving) {
                     try {
                         const ride: any = await Ride.create({
                             ...notNull,
