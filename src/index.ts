@@ -21,6 +21,8 @@ const appOptions: Options = {
                 const user = await decodeJWT(token);
                 if (user) {
                     // onConnect 안에서 리턴되는 객체는 request.connection.context 안쪽에 저장된다.
+                    // subscribe 하고 있는 현재 user가 누군지 알기 위한 작업.
+                    // subscription은 http가 아닌 websocket을 사용하므로, websocket용 인증을 한 번 더 작업해주는 것.
                     return {
                         currentUser: user
                     };
