@@ -63,3 +63,6 @@ typings/
 # prebuild output
 src/types/graph.d.ts
 src/schema.graphql
+
+# build output
+dist/
