@@ -33,7 +33,7 @@
     "test": "exit",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api",
+    "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api && copy ./types/* ../dist/types",
     "start": "cd dist && node ."
   },
   "dependencies": {
