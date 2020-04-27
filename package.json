@@ -34,9 +34,9 @@
     "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
     "types": "graphql-to-typescript ./src/schema.graphql ./src/types/graph.d.ts",
     "test": "exit",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rm -rf dist && yarn types",
     "build": "tsc",
-    "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api && copy ./types/* ../dist/",
+    "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api",
     "start": "cd dist && node ."
   },
   "dependencies": {
