@@ -19,7 +19,8 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "declarationDir": "src/types/"
   },
   "exclude": [
     "node_modules",
