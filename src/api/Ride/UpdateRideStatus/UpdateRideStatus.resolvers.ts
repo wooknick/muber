@@ -40,6 +40,10 @@ const resolvers: Resolvers = {
                 ride.save();
               }
             } else {
+              if (args.status === "FINISHED") {
+                user.isTaken = false;
+                await user.save();
+              }
               ride = await Ride.findOne(
                 {
                   id: args.rideId,
@@ -49,6 +53,9 @@ const resolvers: Resolvers = {
               );
             }
             if (ride) {
+              const passenger: User = ride.passenger;
+              passenger.isRiding = false;
+              await passenger.save();
               ride.status = args.status;
               ride.save();
               pubSub.publish("rideUpdate", {
