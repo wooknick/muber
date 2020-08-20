@@ -40,7 +40,7 @@
     "start": "cd dist && node ."
   },
   "dependencies": {
-    "bcrypt": "^3.0.6",
+    "bcrypt": "^5.0.0",
     "class-validator": "^0.10.2",
     "copy": "^0.3.2",
     "cors": "^2.8.5",
